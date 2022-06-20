@@ -1,10 +1,11 @@
+import { Wrapper } from 'components/organisms/Navigation/Navigation.styles';
+import Logo from 'components/atoms/Logo/Logo';
+
 const Navigation = () => {
   return (
-    <ul>
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-    </ul>
+    <Wrapper>
+      <Logo />
+    </Wrapper>
   );
 };
 
