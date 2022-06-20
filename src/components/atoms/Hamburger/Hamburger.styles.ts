@@ -15,6 +15,10 @@ export const StyledHamburger = styled.button<Props>`
   cursor: pointer;
   overflow: hidden;
 
+  @media (min-width: 1440px) {
+    display: none;
+  }
+
   div {
     width: 100%;
     height: 3px;
