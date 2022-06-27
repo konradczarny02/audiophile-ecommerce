@@ -5,6 +5,7 @@ export const Container = styled.div`
   width: 100%;
   padding: 0;
   background-color: ${({ theme }) => theme.colors.black};
+  position: relative;
 
   @media (min-width: 768px) {
     height: 90px;
@@ -35,7 +36,7 @@ export const ContentWrapper = styled.div`
       margin-left: 42px;
     }
 
-    svg:nth-child(4) {
+    svg:nth-child(5) {
       margin-left: auto;
     }
   }
@@ -45,7 +46,7 @@ export const ContentWrapper = styled.div`
     margin: 0 160px;
     justify-content: space-between;
 
-    svg:nth-child(4) {
+    svg:nth-child(5) {
       margin-left: 0;
     }
   }

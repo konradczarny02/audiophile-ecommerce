@@ -4,6 +4,7 @@ import CartIcon from 'components/atoms/CartIcon/CartIcon';
 import Hamburger from 'components/atoms/Hamburger/Hamburger';
 import { useState } from 'react';
 import DesktopNav from 'components/molecules/DesktopNav/DesktopNav';
+import MobileNav from 'components/molecules/MobileNav/MobileNav';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,6 +15,7 @@ const Navigation = () => {
         <Hamburger isOpen={isOpen} handleNavOpen={handleNavOpen} />
         <Logo />
         <DesktopNav />
+        <MobileNav isOpen={isOpen} />
         <CartIcon />
       </ContentWrapper>
     </Container>
