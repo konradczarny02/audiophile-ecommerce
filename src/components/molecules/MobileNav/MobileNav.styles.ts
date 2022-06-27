@@ -10,9 +10,9 @@ export const StyledNav = styled.div<Props>`
   background-color: ${({ theme }) => theme.colors.white};
   position: absolute;
   transition: transform 0.6s ease-in-out;
-  top: 80px;
   left: 0;
-  transform: translateY(${({ isOpen }) => (isOpen ? '0' : '-100%')});
+  bottom: 80px;
+  transform: translateY(${({ isOpen }) => (isOpen ? 'calc(100% + 80px)' : '0')});
   z-index: -1;
 
   ul {
@@ -22,18 +22,8 @@ export const StyledNav = styled.div<Props>`
     flex-wrap: wrap;
   }
 
-  /* &::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.2);
-    height: 100%;
-    width: 100%;
-    z-index: -12;
-  }*/
-
   @media (min-width: 768px) {
-    top: 90px;
+    bottom: 90px;
   }
 
   @media (min-width: 1440px) {
