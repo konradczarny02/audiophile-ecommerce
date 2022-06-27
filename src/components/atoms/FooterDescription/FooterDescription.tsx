@@ -1,4 +1,4 @@
-import { StyledDescription } from 'components/atoms/FooterDescription/FooterDescription.styles';
+import { StyledDescription, StyledCopyright } from 'components/atoms/FooterDescription/FooterDescription.styles';
 
 const FooterDescription = () => {
   return (
@@ -8,7 +8,7 @@ const FooterDescription = () => {
         specialists who are devoted to helping you get the most out of personal audio. Come and visit our demo facility
         - we’re open 7 days a week.
       </StyledDescription>
-      <StyledDescription>Copyright 2021. All Rights Reserved</StyledDescription>
+      <StyledCopyright>Copyright 2021. All Rights Reserved</StyledCopyright>
     </>
   );
 };
