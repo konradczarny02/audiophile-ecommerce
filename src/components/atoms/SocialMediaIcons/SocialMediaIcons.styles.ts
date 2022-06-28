@@ -11,6 +11,11 @@ export const SocialMediaWrapper = styled.ul`
   li {
     svg {
       margin: 0;
+      cursor: pointer;
+
+      &:hover path {
+        fill: ${({ theme }) => theme.colors.orange};
+      }
     }
   }
 
