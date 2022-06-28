@@ -3,9 +3,6 @@ import styled from 'styled-components';
 export const Wrapper = styled.footer`
   width: 100%;
   background-color: ${({ theme }) => theme.colors.lighterBlack};
-  position: absolute;
-  bottom: 0;
-  left: 0;
 `;
 
 export const StyledFooter = styled.div`

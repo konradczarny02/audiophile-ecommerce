@@ -24,6 +24,8 @@ export const categoriesQuery = `{
     path
     thumbnail {
       url
+      width
+      height
     }
   }
 }`;
