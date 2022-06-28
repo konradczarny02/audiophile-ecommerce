@@ -7,10 +7,10 @@ import {
 } from 'components/organisms/HomepageHeader/HomepageHeader.styles';
 import { Title } from 'components/atoms/Title/Title';
 import ProductLink from 'components/atoms/ProductLink/ProductLink';
-import { HeaderResponse } from 'lib/queries';
+import { HeaderInfo } from 'lib/queries';
 
 type Props = {
-  data: HeaderResponse;
+  data: HeaderInfo;
 };
 
 const HomepageHeader = ({ data: { description, id, imageMobile, imageTablet, imageDesktop, productName } }: Props) => {

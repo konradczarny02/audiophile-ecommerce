@@ -25,10 +25,11 @@ export const StyledHeader = styled.header<HeaderProps>`
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 600px;
+  height: 550px;
 
   @media (min-width: 768px) {
     background-image: url('${({ images }) => images.tablet}');
+    height: 640px;
   }
 
   @media (min-width: 1440px) {

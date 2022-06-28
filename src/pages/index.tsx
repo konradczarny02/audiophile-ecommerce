@@ -1,38 +1,28 @@
 import HomepageHeader from 'components/organisms/HomepageHeader/HomepageHeader';
-import { headerQuery, HeaderResponse } from 'lib/queries';
-import { API_URL } from 'lib/constants';
+import { headerQuery, categoriesQuery } from 'lib/queries';
+import { HeaderData } from 'types/headerTypes';
+import fetcher from 'lib/fetcher';
+import { CategoriesData } from 'types/categoriesTypes';
 
-type Data = {
-  data: {
-    allHeaders: HeaderResponse[];
-  };
+type Props = {
+  headerData: HeaderData;
+  categoriesData: CategoriesData;
 };
 
-type Props = { data: Data };
-
-const Home = ({ data }: Props) => {
-  return <HomepageHeader data={data.data.allHeaders[0]} />;
+const Home = ({ headerData, categoriesData }: Props) => {
+  const categories = categoriesData.data.allCategories;
+  const headerInfo = headerData.data.allHeaders[0];
+  return <HomepageHeader data={headerInfo} />;
 };
 
 export const getStaticProps = async () => {
-  const token = process.env.API_KEY;
-
-  const res = await fetch(API_URL, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Accept: 'application/json',
-      Authorization: `Bearer ${token}`,
-    },
-    body: JSON.stringify({
-      query: headerQuery,
-    }),
-  });
-  const data = await res.json();
+  const headerData = await fetcher(headerQuery);
+  const categoriesData = await fetcher(categoriesQuery);
 
   return {
     props: {
-      data,
+      headerData,
+      categoriesData,
     },
   };
 };

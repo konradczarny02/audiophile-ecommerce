@@ -17,15 +17,13 @@ export const headerQuery = `
         }
       `;
 
-type Image = {
-  url: string;
-};
-
-export type HeaderResponse = {
-  id: string;
-  description: string;
-  productName: string;
-  imageMobile: Image;
-  imageDesktop: Image;
-  imageTablet: Image;
-};
+export const categoriesQuery = `{
+  allCategories {
+    id
+    name,
+    path
+    thumbnail {
+      url
+    }
+  }
+}`;
