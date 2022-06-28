@@ -10,10 +10,10 @@ export const StyledNav = styled.div<Props>`
   background-color: ${({ theme }) => theme.colors.white};
   position: absolute;
   transition: transform 0.6s ease-in-out;
+  top: -750px;
   left: 0;
-  bottom: 80px;
-  transform: translateY(${({ isOpen }) => (isOpen ? 'calc(100% + 80px)' : '0')});
-  z-index: -1;
+  transform: translateY(${({ isOpen }) => (isOpen ? '830px' : '0')});
+  z-index: 1;
 
   ul {
     list-style: none;
@@ -23,7 +23,8 @@ export const StyledNav = styled.div<Props>`
   }
 
   @media (min-width: 768px) {
-    bottom: 90px;
+    top: -400px;
+    transform: translateY(${({ isOpen }) => (isOpen ? '490px' : '0')});
   }
 
   @media (min-width: 1440px) {

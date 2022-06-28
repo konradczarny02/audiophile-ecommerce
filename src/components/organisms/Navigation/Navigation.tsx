@@ -10,15 +10,17 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const handleNavOpen = () => setIsOpen((prevState) => !prevState);
   return (
-    <Container>
-      <ContentWrapper>
-        <Hamburger isOpen={isOpen} handleNavOpen={handleNavOpen} />
-        <Logo />
-        <DesktopNav />
-        <MobileNav isOpen={isOpen} />
-        <CartIcon />
-      </ContentWrapper>
-    </Container>
+    <>
+      <Container>
+        <ContentWrapper>
+          <Hamburger isOpen={isOpen} handleNavOpen={handleNavOpen} />
+          <Logo />
+          <DesktopNav />
+          <CartIcon />
+        </ContentWrapper>
+      </Container>
+      <MobileNav isOpen={isOpen} />
+    </>
   );
 };
 

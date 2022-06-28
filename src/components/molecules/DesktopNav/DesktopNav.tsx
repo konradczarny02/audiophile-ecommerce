@@ -1,24 +1,6 @@
 import DesktopNavLink from 'components/atoms/DesktopNavLink/DesktopNavLink';
 import { DesktopNavList } from 'components/molecules/DesktopNav/DesktopNav.styles';
-
-const pages = [
-  {
-    name: 'HOME',
-    path: '/',
-  },
-  {
-    name: 'HEADPHONES',
-    path: '/headphones',
-  },
-  {
-    name: 'SPEAKERS',
-    path: '/speakers',
-  },
-  {
-    name: 'EARPHONES',
-    path: '/earphones',
-  },
-];
+import { pages } from 'components/molecules/DesktopNav/data';
 
 const DesktopNav = () => {
   return (

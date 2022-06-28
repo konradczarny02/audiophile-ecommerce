@@ -6,6 +6,7 @@ export const Container = styled.div`
   padding: 0;
   background-color: ${({ theme }) => theme.colors.black};
   position: relative;
+  z-index: 22;
 
   @media (min-width: 768px) {
     height: 90px;
@@ -25,10 +26,11 @@ export const ContentWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 
   @media (min-width: 768px) {
-    margin: 0 40px;
-    width: calc(100% - 80px);
+    margin: 0 auto;
+    width: 90%;
     padding: 0;
     justify-content: flex-start;
 
@@ -42,9 +44,14 @@ export const ContentWrapper = styled.div`
   }
 
   @media (min-width: 1440px) {
-    width: calc(100% - 320px);
-    margin: 0 160px;
+    width: 80%;
+    margin: 0 auto;
     justify-content: space-between;
+    max-width: 1600px;
+
+    svg:nth-child(2) {
+      margin-left: 0;
+    }
 
     svg:nth-child(5) {
       margin-left: 0;

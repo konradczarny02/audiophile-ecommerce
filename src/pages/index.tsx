@@ -1,11 +1,12 @@
-import Navigation from 'components/organisms/Navigation/Navigation';
+import styled from 'styled-components';
+
+const Block = styled.div`
+  width: 100%;
+  height: calc(100vh - 96px);
+`;
 
 const Home = () => {
-  return (
-    <div>
-      <Navigation />
-    </div>
-  );
+  return <Block />;
 };
 
 export default Home;
