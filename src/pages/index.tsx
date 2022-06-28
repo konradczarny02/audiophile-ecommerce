@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import HomepageHeader from 'components/organisms/HomepageHeader/HomepageHeader';
 
 const Block = styled.div`
   width: 100%;
@@ -6,7 +7,7 @@ const Block = styled.div`
 `;
 
 const Home = () => {
-  return <Block />;
+  return <HomepageHeader />;
 };
 
 export default Home;
