@@ -21,7 +21,6 @@ export const ContentWrapper = styled.div`
   width: 100%;
   height: 100%;
   padding: 0 24px;
-  border-bottom: 1px solid ${({ theme }) => theme.colors.darkGray};
   background-color: transparent;
   display: flex;
   align-items: center;
