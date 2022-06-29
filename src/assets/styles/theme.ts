@@ -9,6 +9,7 @@ interface IColor {
   gray: Color;
   lighterGray: Color;
   darkGray: Color;
+  veryDarkGray: Color;
 }
 
 type ThemeProps = { colors: IColor };
@@ -23,5 +24,6 @@ export const theme: ThemeProps = {
     gray: '#fafafa',
     lighterGray: '#f1f1f1',
     darkGray: '#979797',
+    veryDarkGray: '#97979766',
   },
 };

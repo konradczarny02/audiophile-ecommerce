@@ -25,13 +25,26 @@ export const StyledHeader = styled.header<HeaderProps>`
     linear-gradient(
       90deg,
       rgba(16, 16, 16, 1) 0%,
-      rgba(28, 28, 28, 1) 25%,
+      rgba(28, 28, 28, 1) 20%,
       rgba(38, 38, 38, 1) 50%,
-      rgba(28, 28, 28, 1) 75%,
+      rgba(28, 28, 28, 1) 80%,
       rgba(16, 16, 16, 1) 100%
     );
   height: 550px;
   background-size: contain;
+
+  @media (min-width: 500px) {
+    background: url('${({ images }) => images.tablet}') no-repeat center,
+      linear-gradient(
+        90deg,
+        rgba(16, 16, 16, 1) 0%,
+        rgba(28, 28, 28, 1) 15%,
+        rgba(38, 38, 38, 1) 50%,
+        rgba(28, 28, 28, 1) 85%,
+        rgba(16, 16, 16, 1) 100%
+      );
+    background-size: contain;
+  }
 
   @media (min-width: 768px) {
     background: url('${({ images }) => images.tablet}') no-repeat center,

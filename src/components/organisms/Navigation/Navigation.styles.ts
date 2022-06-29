@@ -26,6 +26,7 @@ export const ContentWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   position: relative;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.veryDarkGray};
 
   @media (min-width: 768px) {
     margin: 0 auto;
