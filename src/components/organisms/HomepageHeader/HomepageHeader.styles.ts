@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import bg from 'assets/images/homepage/image-header.jpg';
 import { Title } from 'components/atoms/Title/Title';
+import bg from '/assets/images/image-header2-PhotoRoom.png';
 
 type HeaderProps = {
   images: {
@@ -21,18 +21,82 @@ export const H3 = styled.h3`
 export const StyledHeader = styled.header<HeaderProps>`
   width: 100%;
   display: flex;
-  background-image: url('${({ images }) => images.mobile}');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 600px;
+  background: url('${({ images }) => images.mobile}') no-repeat center,
+    linear-gradient(
+      90deg,
+      rgba(16, 16, 16, 1) 0%,
+      rgba(28, 28, 28, 1) 20%,
+      rgba(38, 38, 38, 1) 50%,
+      rgba(28, 28, 28, 1) 80%,
+      rgba(16, 16, 16, 1) 100%
+    );
+  height: 550px;
+  background-size: contain;
+
+  @media (min-width: 500px) {
+    background: url('${({ images }) => images.tablet}') no-repeat center,
+      linear-gradient(
+        90deg,
+        rgba(16, 16, 16, 1) 0%,
+        rgba(28, 28, 28, 1) 15%,
+        rgba(38, 38, 38, 1) 50%,
+        rgba(28, 28, 28, 1) 85%,
+        rgba(16, 16, 16, 1) 100%
+      );
+    background-size: contain;
+  }
 
   @media (min-width: 768px) {
-    background-image: url('${({ images }) => images.tablet}');
+    background: url('${({ images }) => images.tablet}') no-repeat center,
+      linear-gradient(
+        90deg,
+        rgba(16, 16, 16, 1) 0%,
+        rgba(28, 28, 28, 1) 25%,
+        rgba(38, 38, 38, 1) 50%,
+        rgba(28, 28, 28, 1) 75%,
+        rgba(16, 16, 16, 1) 100%
+      );
+    background-size: contain;
+    height: 640px;
   }
 
   @media (min-width: 1440px) {
-    background-image: url('${({ images }) => images.desktop}');
+    background: url('${({ images }) => images.desktop}') no-repeat center,
+      linear-gradient(
+        90deg,
+        rgba(16, 16, 16, 1) 0%,
+        rgba(28, 28, 28, 1) 10%,
+        rgba(50, 50, 50, 1) 50%,
+        rgba(28, 28, 28, 1) 90%,
+        rgba(16, 16, 16, 1) 100%
+      );
+    background-size: contain;
+  }
+
+  @media (min-width: 1600px) {
+    background: url('${({ images }) => images.desktop}') no-repeat center,
+      linear-gradient(
+        90deg,
+        rgba(16, 16, 16, 1) 0%,
+        rgba(28, 28, 28, 1) 20%,
+        rgba(50, 50, 50, 1) 50%,
+        rgba(28, 28, 28, 1) 80%,
+        rgba(16, 16, 16, 1) 100%
+      );
+    background-size: contain;
+  }
+
+  @media (min-width: 1900px) {
+    background: url('${({ images }) => images.desktop}') no-repeat center,
+      linear-gradient(
+        90deg,
+        rgba(16, 16, 16, 1) 0%,
+        rgba(28, 28, 28, 1) 30%,
+        rgba(50, 50, 50, 1) 50%,
+        rgba(28, 28, 28, 1) 70%,
+        rgba(16, 16, 16, 1) 100%
+      );
+    background-size: contain;
   }
 `;
 
@@ -75,9 +139,11 @@ export const Wrapper = styled.div`
 
   ${Title} {
     text-align: center;
+    flex-basis: 50%;
 
     @media (min-width: 1440px) {
       text-align: left;
+      margin-right: auto;
     }
   }
 

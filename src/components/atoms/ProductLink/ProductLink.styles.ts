@@ -9,4 +9,9 @@ export const StyledLink = styled.a`
   font-weight: 700;
   background-color: ${({ theme }) => theme.colors.orange};
   margin: 4px 0;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #fbaf85;
+  }
 `;

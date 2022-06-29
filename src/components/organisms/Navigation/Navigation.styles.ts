@@ -4,7 +4,7 @@ export const Container = styled.div`
   height: 80px;
   width: 100%;
   padding: 0;
-  background-color: ${({ theme }) => theme.colors.black};
+  background-color: ${({ theme }) => theme.colors.lighterBlack};
   position: relative;
   z-index: 22;
 
@@ -26,6 +26,7 @@ export const ContentWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   position: relative;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.veryDarkGray};
 
   @media (min-width: 768px) {
     margin: 0 auto;
