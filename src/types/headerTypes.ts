@@ -1,4 +1,4 @@
-import { DynamicImage, StaticImage } from 'types/sharedTypes';
+import { DynamicImage } from 'types/sharedTypes';
 
 export type HeaderInfo = {
   id: string;

@@ -139,9 +139,11 @@ export const Wrapper = styled.div`
 
   ${Title} {
     text-align: center;
+    flex-basis: 50%;
 
     @media (min-width: 1440px) {
       text-align: left;
+      margin-right: auto;
     }
   }
 
