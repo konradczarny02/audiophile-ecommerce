@@ -4,7 +4,7 @@ export const Container = styled.div`
   height: 80px;
   width: 100%;
   padding: 0;
-  background-color: ${({ theme }) => theme.colors.black};
+  background-color: ${({ theme }) => theme.colors.lighterBlack};
   position: relative;
   z-index: 22;
 
