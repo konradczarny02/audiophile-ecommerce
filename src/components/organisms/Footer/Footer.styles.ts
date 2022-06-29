@@ -68,6 +68,7 @@ export const LinksWrapper = styled.ul`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  list-style: none;
 
   @media (min-width: 768px) {
     flex-basis: 50%;
