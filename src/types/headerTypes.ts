@@ -1,12 +1,12 @@
-import { Image } from 'types/sharedTypes';
+import { DynamicImage, StaticImage } from 'types/sharedTypes';
 
 export type HeaderInfo = {
   id: string;
   description: string;
   productName: string;
-  imageMobile: Image;
-  imageDesktop: Image;
-  imageTablet: Image;
+  imageMobile: DynamicImage;
+  imageDesktop: DynamicImage;
+  imageTablet: DynamicImage;
 };
 
 export type HeaderData = {

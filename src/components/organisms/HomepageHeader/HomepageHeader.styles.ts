@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import bg from 'assets/images/homepage/image-header.jpg';
 import { Title } from 'components/atoms/Title/Title';
 
 type HeaderProps = {

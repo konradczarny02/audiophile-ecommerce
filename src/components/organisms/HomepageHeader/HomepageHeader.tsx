@@ -7,7 +7,7 @@ import {
 } from 'components/organisms/HomepageHeader/HomepageHeader.styles';
 import { Title } from 'components/atoms/Title/Title';
 import ProductLink from 'components/atoms/ProductLink/ProductLink';
-import { HeaderInfo } from 'lib/queries';
+import { HeaderInfo } from 'types/headerTypes';
 
 type Props = {
   data: HeaderInfo;
